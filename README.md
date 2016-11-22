@@ -24,5 +24,8 @@ Then run the program like:
 This line would result in frames that are spaced one minute apart. The resulting frames have the same dimensions as the video. They are numbered like `example_0000.jpg`, `example_0001.jpg`, and so on, where `example` is the name of the video. The frames are saved in the directory containing the video file.
 
 
+To run a bunch of videos in parallel using GNU `parallel`, run:
+
+`ls *.mp4 | gtime parallel -j+0 --eta 'python add_grid.py -i {} -m 1 2>&1 {.}.log'`
 
 Requires OpenCV, numpy, sys, os, and argparse modules (and all dependencies).
