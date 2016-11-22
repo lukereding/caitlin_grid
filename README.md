@@ -12,7 +12,7 @@ The locations of the lines are hardcoded in the script but this could be easily 
 
 To get the example video and generate the output shown in the `examples` folder, do the following:
 
-`git clone https://github.com/lukereding/caitlin_grid.git` # clone this repo       
+> `git clone https://github.com/lukereding/caitlin_grid.git` # clone this repo       
 `cd caitlin_grid`    # cd into the folder      
 `wget https://dl.dropboxusercontent.com/u/20577270/ch08_20161116113000.mp4 ` # download the video        
 `mv ch08_20161116113000.mp4 example.mp4 ` # rename the video     
