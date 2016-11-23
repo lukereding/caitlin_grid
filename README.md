@@ -19,9 +19,9 @@ To get the example video and generate the output shown in the `examples` folder,
 
 Then run the program like:
 
-`python add_grid.py -i ./example/examples.mp4 -m 1`
+`python add_grid.py -i ./example/example.mp4 -m 1`
 
-This line would result in frames that are spaced one minute apart. The resulting frames have the same dimensions as the video. They are numbered like `example_0000.jpg`, `example_0001.jpg`, and so on, where `example` is the name of the video. The frames are saved in the directory containing the video file.
+This line results in frames spaced one minute apart. We can confirm this is the case by looking at the timestamps in the photos in the `example` folder: each is one minute apart. These frame same dimensions as the video and are numbered like `example_0000.jpg`, `example_0001.jpg`, and so on, where `example` is the name of the video. The frames are saved in the directory containing the video file.
 
 
 To run a bunch of videos in parallel using GNU `parallel`, run:
