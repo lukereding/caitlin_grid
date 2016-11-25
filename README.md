@@ -1,4 +1,4 @@
-# caitlin grid
+![caitlin grid](dope_logo.png)
 
 Code associated with (1) overlaying a grid and (2) extracting frames from videos for Caitlin.
 
