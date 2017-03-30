@@ -29,3 +29,16 @@ To run a bunch of videos in parallel using GNU `parallel`, run:
 `ls *.mp4 | gtime parallel -j+0 --eta 'python add_grid.py -i {} -m 1 2>&1 {.}.log'`
 
 Requires OpenCV, numpy, sys, os, and argparse modules (and all dependencies).
+
+### frame_extract.py
+
+`frame_extract.py` is a simpler version of `add_grid.py` that _just_ extracts frames and doesn't add an sort of a grid. Created for Mary to use with her FRI kids.
+
+It takes two arguments:
+  - __-i__: the input video
+  - __-m__: the number of seconds in between extracted frames. Defaults to 15.
+
+
+  To run a bunch of videos in parallel using GNU `parallel`, run:
+
+  `ls *.mp4 | gtime parallel -j+0 --eta 'python frame_extract.py -i {} -s 15 2>&1 {.}.log'`
