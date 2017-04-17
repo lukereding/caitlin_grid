@@ -1,5 +1,4 @@
 import cv2
-import numpy as np
 import sys
 import argparse
 import os
@@ -15,9 +14,8 @@ parameters:
 
 Run like: `python frame_extract.py -i example.mp4 -s 15`
 to extract frames every 15 seconds.
+
 '''
-
-
 
 def parse_arguments():
     """Parse arguments."""
@@ -67,9 +65,10 @@ if __name__ == "__main__":
     name = video_name.split('.')[0]
 
     # create new dirctory to store frames in
-    if not os.path.exists(video_path + '{}/'.format(name)):
-        os.makedirs(video_path + '{}/'.format(name))
-    os.chdir(video_path + '{}/'.format(name))
+    n = os.path.splitext(video_path)[0]
+    if not os.path.exists('{}/'.format(name)):
+        os.makedirs('{}/'.format(name))
+    os.chdir('{}/'.format(name))
 
     # get size of video
     width = cap.get(3)

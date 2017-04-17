@@ -42,3 +42,12 @@ It takes two arguments:
   To run a bunch of videos in parallel using GNU `parallel`, run:
 
   `ls *.mp4 | gtime parallel -j+0 --eta 'python frame_extract.py -i {} -s 15 2>&1 {.}.log'`
+
+
+Actually, this is a more efficient way of doing things. It using `find` to look only in folders that match `Grp[0-9]*all` and only takes the `*.mov` files that start with `G` (there are some files named things like `._Group1_femagg_Xnig_SM_obs5_per5_5min.mov` that I don't want to use). 
+
+```{bash}
+
+find . -path "*/Grp[0-9]*all/G*.mov" -maxdepth 2 | parallel -j+0 --eta 'python ~/Documents/caitlin_grid/frame_extract.py -i {} -s 15'
+
+ ```
